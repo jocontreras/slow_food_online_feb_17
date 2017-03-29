@@ -1,5 +1,7 @@
-List Of Restaurants<br>
-Thai Restaurant<br>
-Italian Restaurant<br>
-Chinese Restaurant<br>
-Indian Restaurant
+%h1 List Of Restaurants
+%ul
+  - @restaurants.each do |restaurant|
+    %li
+      = restaurant.name
+      Restaurant
+      %br/
