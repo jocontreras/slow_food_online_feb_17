@@ -1,6 +1,7 @@
 Feature: index page with a list restaurants
   As a visitor
-  As soon as I arrive at the index page
+  in order to access the app
+  I need to see an index page
   I would like to be presented with some examples of restaurants that deliver food
 
   Scenario: viewing list of restaurants
