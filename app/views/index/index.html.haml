@@ -1,2 +1,7 @@
-%li List Of Restaurants<br>
-%li Thai Restaurant
+%h1 List Of Restaurants
+%ul
+  - @restaurants.each do |restaurant|
+    %li
+      = restaurant.name
+      Restaurant
+      %br/
