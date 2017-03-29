@@ -6,10 +6,10 @@ Feature: index page with a list restaurants
 
  Background:
  Given the following restaurant exists
-   | name        | street     | zip_code | city     | food_style                |
-   | Denmark     | Kyra Green  | 0       | Pagacside| Iran, Islamic Republic of |
+   | name        | street      | zip_code | city     | food_style                |
+   | Denmark     | Kyra Green  | 0        | Pagacside| Iran, Islamic Republic of |
 
   Scenario: viewing list of restaurants
     Given I am on the index page
     And I should see "List Of Restaurants"
-    And I should see "Denmark Restaurant"
+    And I should see "Denmark"
