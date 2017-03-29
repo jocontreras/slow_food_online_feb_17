@@ -5,7 +5,7 @@ Feature: index page with a list restaurants
 
   Scenario: viewing list of restaurants
     Given I am on the index page
-    And I should see a "List Of Restaurants"
+    And I should see "List Of Restaurants"
     And I should see "Thai Restaurant"
     And I should see "Italian Restaurant"
     And I should see "Chinese Restaurant"
