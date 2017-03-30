@@ -3,11 +3,11 @@ require 'ffaker'
 Restaurant.delete_all
 
 5.times do
-  		name= FFaker::Address.country + " Restaurant",
-      street= FFaker::Address.street_name,
-      zip_code= FFaker::Address.country_code,
-      city= FFaker::Address.city,
-      food_style= FFaker::Address.country
+  name= FFaker::Address.country + " Restaurant",
+  street= FFaker::Address.street_name,
+  zip_code= FFaker::Address.country_code,
+  city= FFaker::Address.city,
+  food_style= FFaker::Address.country
 
  Restaurant.create(name: name,
                    street: street,
