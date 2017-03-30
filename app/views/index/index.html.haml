@@ -1,0 +1,6 @@
+%h1 List Of Restaurants
+%ul
+  - @restaurants.each do |restaurant|
+    %li
+      = restaurant.name
+      %br/
