@@ -5,9 +5,11 @@ Feature: index page with a list restaurants
   I would like to be presented with some examples of restaurants that deliver food
 
   Background:
-    Given a restaurant called "Chinese Foods" exits
+    Given the following restaurants exist
+    | name        |
+    | NisseKebbab |
 
   Scenario: viewing list of restaurants
     Given I am on the index page
     And I should see "List Of Restaurants"
-    And I should see "Chinese Foods"
+    And I should see "NisseKebbab"
