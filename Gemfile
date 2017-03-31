@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'haml-rails'
 gem 'ffaker'
 gem 'foundation-rails'
+gem 'poltergeist'
 
 
 group :development, :test do
@@ -22,6 +23,8 @@ group :development, :test do
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
   gem 'launchy'
+
+
 end
 
 group :development do
