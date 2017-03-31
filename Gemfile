@@ -14,7 +14,6 @@ gem 'ffaker'
 gem 'foundation-rails'
 gem 'poltergeist'
 
-
 group :development, :test do
   gem 'pry'
   gem 'rspec-rails'
@@ -23,8 +22,6 @@ group :development, :test do
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
   gem 'launchy'
-
-
 end
 
 group :development do

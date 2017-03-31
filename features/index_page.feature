@@ -17,3 +17,4 @@ Feature: index page with a list restaurants
   Scenario: Loading the map
     Given I am on the index page
     And the map is loaded
+
