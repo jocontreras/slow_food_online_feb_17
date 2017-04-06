@@ -4,7 +4,6 @@
     - if @dish.errors.any?
       .callout.small.alert
         %ul
-          Please make sure to fill in all the fields correctly
         - @dish.errors.full_messages.each do |error|
           %li
             = error
@@ -16,6 +15,4 @@
       = f.number_field :price
       = f.label :description
       = f.text_area :description
-      = f.label :category
-      = f.select(:category , ['Starter','Main course','Dessert'])
       = f.submit "Add dish", class: 'button expanded'
