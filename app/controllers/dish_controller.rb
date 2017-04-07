@@ -20,6 +20,10 @@ class DishController < ApplicationController
     end
   end
 
+  def edit
+    @dish = Dish.find(params[:id])
+  end
+
   private
 
   def dish_params
