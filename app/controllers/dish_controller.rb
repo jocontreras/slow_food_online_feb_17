@@ -32,5 +32,4 @@ class DishController < ApplicationController
                                  :description,
                                  :category,
                                  :menu_id)
-  end
 end
