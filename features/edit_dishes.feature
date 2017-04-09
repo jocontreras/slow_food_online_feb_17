@@ -26,7 +26,7 @@ Feature: Edit dishes on menu
 
    Scenario: Unsuccesfull edit of the dish
     Given I am on the "Kebabrulle" dish edit page for "NisseKebbab" restaurant
-    When I fill in "name" with " "
-    Then I click "Edit Dish"
+    When I fill in "dish_name" with " "
+    Then I click "Edit dish"
     Then I should see "Name can't be blank"
     And the dish name should still be "Kebabrulle" in the system
