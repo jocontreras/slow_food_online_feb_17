@@ -17,23 +17,23 @@ Given the following dishes exist
   | Kebabrulle | 180   | Nisses Takeaway |
   | Burger     | 190   | Tasty burgers   |
 
-Scenario: I successfully delete the dish
+Scenario: I successfully deleted the dish
   Given I am on the "Kebabrulle" delete dish page for "NisseKebbab" restaurant
-  Then I should see "dish_name" with "Kebabrulle"
-  And I should see "dish_price" with "180"
-  And I should see "dish_description" with "Xtra All"
-  And I should see "Starter" from "Category"
+  Then I should see "Kebabrulle" in "dish_name"
+  And I should see "180" in "dish_price"
+  And I should see "Xtra All" in "dish_description"
+  And I should see "Category" in "Starter"
   Then I click "Delete dish"
   Then I should see "Are you sure you want to delete this dish?"
   Then I should see "Kebabrulle details successfully deleted"
   And the dish name in the system should now be " "
 
-Scenario: Unsuccesfull edit of the dish
+Scenario: Unsuccesfull deletion of dish
   Given I am on the "Kebabrulle" delete dish page for "NisseKebbab" restaurant
-  Then I should see "dish_name" with "Kebabrulle"
-  And I should see "dish_price" with "180"
-  And I should see "dish_description" with "Xtra All"
-  And I should see "Starter" from "Category"
+  Then I should see "Kebabrulle" in "dish_name"
+  And I should see "180" in "dish_price"
+  And I should see "Xtra All" in "dish_description"
+  And I should see "Category" in "Starter"
   Then I click "Delete dish"
   Then I should see "Are you sure you want to delete this dish?"
   Then I should see "Kebabrulle details successfully deleted"
