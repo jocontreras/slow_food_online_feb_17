@@ -1,5 +1,5 @@
 .row
-  .medium-8.medium-centered  
+  .medium-8.medium-centered
     - if @dish.errors.any?
       .callout.small.alert
         %ul
@@ -7,7 +7,7 @@
         - @dish.errors.full_messages.each do |error|
           %li
             = error
-    = form_for [@menu.restaurant, @menu, @dish], url: restaurant_menu_dish_index_path do |f|
+    = form_for [ @menu.restaurant, @menu, @dish ],url: restaurant_menu_dish_index_path do |f|
       = f.label :name
       = f.text_field :name
       = f.label :price

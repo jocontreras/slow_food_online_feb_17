@@ -20,10 +20,16 @@ class DishController < ApplicationController
     end
   end
 
+  def edit
+   @menu = Menu.find(params[:menu_id])
+   @dish = Dish.find(params[:id])
+  end
+
   def update
     @menu = Menu.find(params[:menu_id])
+    @dish = Dish.find(params[:id])
     if @dish.update(dish_params)
-      flash[:notice] = 'A dish information has been updated'
+      flash[:notice] = "#{@dish.name} details successfully changed"
       redirect_to restaurant_menu_path(@menu.restaurant, @menu)
     else
       render 'edit'
