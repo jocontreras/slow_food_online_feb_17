@@ -20,8 +20,14 @@ class DishController < ApplicationController
     end
   end
 
-  def edit
-    @dish = Dish.find(params[:id])
+  def update
+    @menu = Menu.find(params[:menu_id])
+    if @dish.update(dish_params)
+      flash[:notice] = 'A dish information has been updated'
+      redirect_to restaurant_menu_path(@menu.restaurant, @menu)
+    else
+      render 'edit'
+    end
   end
 
   private
@@ -32,4 +38,5 @@ class DishController < ApplicationController
                                  :description,
                                  :category,
                                  :menu_id)
+  end
 end
