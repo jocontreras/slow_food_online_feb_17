@@ -18,8 +18,9 @@ Given the following dishes exist
   | Burger     | 190   | Tasty burgers   |
 
 Scenario: I successfully deleted the dish
-  Given I am on the "Kebabrulle" delete dish page for "NisseKebbab" restaurant
-  Then I should see "Kebabrulle" in "dish_name"
+  Given I am on the restaurant "NisseKebbab" delete dish page
+  Then I should see "Delete dish"
+  And I should see "Kebabrulle" in "dish_name"
   And I should see "180" in "dish_price"
   And I should see "Xtra All" in "dish_description"
   And I should see "Category" in "Starter"
@@ -29,8 +30,9 @@ Scenario: I successfully deleted the dish
   And the dish name in the system should now be " "
 
 Scenario: Unsuccesfull deletion of dish
-  Given I am on the "Kebabrulle" delete dish page for "NisseKebbab" restaurant
-  Then I should see "Kebabrulle" in "dish_name"
+  Given I am on the restaurant "NisseKebbab" delete dish page
+  Then I should see "Delete dish"
+  And I should see "Kebabrulle" in "dish_name"
   And I should see "180" in "dish_price"
   And I should see "Xtra All" in "dish_description"
   And I should see "Category" in "Starter"
