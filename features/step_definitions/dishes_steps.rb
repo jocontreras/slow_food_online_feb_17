@@ -36,3 +36,11 @@ Then(/^the dish name should still be "([^"]*)" in the system$/) do |dish_name|
   dish = Dish.find_by(name: dish_name)
   expect(dish).not_to be_nil
 end
+
+Then(/^I should be on the edit page for "([^"]*)"$/) do |dish_name|
+  dish = Dish.find_by(name: dish_name)
+  restaurant = dish.menu.restaurant
+  menu = restaurant.menu
+  expect(current_path)
+    .to eq edit_restaurant_menu_dish_path(restaurant, menu, dish)
+end
