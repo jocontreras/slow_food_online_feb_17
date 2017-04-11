@@ -1,5 +1,6 @@
 .row
   .medium-8.medium-centered
+    %h2 Edit dish from menu
     - if @dish.errors.any?
       .callout.small.alert
         %ul
@@ -16,4 +17,4 @@
       = f.text_area :description
       = f.label :category
       = f.select(:category , ['Starter','Main course','Dessert'])
-      = f.submit "Edit dish", class: 'button expanded'
+      = f.submit "Save", class: 'button expanded'

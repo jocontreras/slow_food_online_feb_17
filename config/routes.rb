@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   resources :restaurants, only: [:show, :new, :create] do
     resources :menus, only: [:show] do
-      resources :dish, only: [:new, :create, :edit, :update]
+      resources :dish, only: [:new, :create, :show, :edit, :update]
     end
   end
 end
